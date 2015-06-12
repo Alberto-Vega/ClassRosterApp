@@ -84,10 +84,9 @@
 			isa = PBXGroup;
 			children = (
 				BF4BED9E1B21307300889895 /* AppDelegate.swift */,
-				BF4BEDA01B21307300889895 /* ViewController.swift */,
-				BF5B8FB01B2957F50036577B /* Student.swift */,
-				BF5B8FAE1B2953C20036577B /* DetailViewController.swift */,
-				BF4BEDA21B21307300889895 /* Main.storyboard */,
+				BFEAEE041B2B544000C4789D /* Models */,
+				BFEAEE051B2B6DD100C4789D /* Controllers */,
+				BFEAEE061B2B6E0700C4789D /* Views */,
 				BF4BEDA51B21307300889895 /* Images.xcassets */,
 				BF4BEDBE1B21333F00889895 /* logo.jpeg */,
 				BF4BEDA71B21307300889895 /* LaunchScreen.xib */,
@@ -119,6 +118,31 @@
 				BF4BEDB31B21307300889895 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BFEAEE041B2B544000C4789D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BF5B8FB01B2957F50036577B /* Student.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		BFEAEE051B2B6DD100C4789D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BF5B8FAE1B2953C20036577B /* DetailViewController.swift */,
+				BF4BEDA01B21307300889895 /* ViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		BFEAEE061B2B6E0700C4789D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BF4BEDA21B21307300889895 /* Main.storyboard */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
