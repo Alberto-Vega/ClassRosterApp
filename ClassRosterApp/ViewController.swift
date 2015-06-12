@@ -8,43 +8,59 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDataSource {
   
-  @IBOutlet weak var studentNameLabel: UILabel!
+  @IBOutlet weak var tableView: UITableView!
   
-  let students = ["Heidi", "Joao", "Alberto", "Richard", "Karinne"]
-  var currentIndex = 0
+  var students = [Student]()
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    studentNameLabel.text = self.students[0]
+    self.tableView.dataSource = self
+    
+    let alberto = Student(first: "Alberto", last: "Vega")
+    let adam = Student(first: "Adam", last: "Wallraff")
+    let molly = Student(first: "Molly", last: "Kent")
+    let nicholas = Student(first: "Nicholas", last: "Von Pentz")
+    let richard = Student(first: "Richard", last: "Woolley")
+    let benjamin = Student(first: "Benjamin", last: "Laddin")
+    let bob = Student(first: "Bob", last: "Glass")
+    let brad = Student(first: "Brad", last: "Johnson")
+    let brandon = Student(first: "Brandon", last: "Roberts")
+    let chris = Student(first: "Chris", last: "Olds")
+    let cierra = Student(first: "Cierra", last: "Figaro")
+    let craig = Student(first: "Craig", last: "Chaillie")
+    let edrease = Student(first: "Edrease", last: "Peshtaz")
+    let heidi = Student(first: "Heide", last: "Laursen")
+    let jeremy = Student(first: "Jeremy", last: "Moore")
+    let joao = Student(first: "Joao", last: "Alves")
+
+    students += [alberto, adam, molly, nicholas, richard, benjamin, bob, brad, brandon, chris, cierra, craig, edrease, heidi, jeremy,joao]
+    
   }
   
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
+  func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return self.students.count
   }
   
-  @IBAction func nextButtonPressed(sender: UIButton) {
-    if currentIndex < students.count - 1 {
-      currentIndex += 1
-      println(self.currentIndex)
-    } else {
-      currentIndex = students.count - 1
+  func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    let cell = self.tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! UITableViewCell
+
+  let studentToDisplay = self.students[indexPath.row]
+  cell.textLabel?.text = studentToDisplay.firstName + " " + studentToDisplay.lastName
+  return cell
+  }
+  
+  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    if segue.identifier == "ShowDetailViewController" {
+      let detailViewController = segue.destinationViewController as! DetailViewController
+      
+      let indexPath = self.tableView.indexPathForSelectedRow()
+      let selectedRow = indexPath!.row
+      let selectedPerson = self.students[selectedRow]
+      println(selectedPerson.firstName)
+      detailViewController.selectedPerson = selectedPerson
     }
-    let studentName = students[currentIndex]
-    studentNameLabel.text = studentName
-  }
-  
-  @IBAction func previousButtonPressed(sender: UIButton) {
-    if currentIndex > 0 {
-      currentIndex -= 1
-      println(self.currentIndex)
-    } else {
-      currentIndex = 0
-    }
-    let studentName = students[currentIndex]
-    studentNameLabel.text = studentName
   }
 }
 

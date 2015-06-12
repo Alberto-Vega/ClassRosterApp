@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>B4994B9C-6A6A-48E8-B91E-1BAE344A390B</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Pokemon</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>E0B79C0F7CB986F0B0BE8EB6CE2258EFC97C067C</key>
+		<string>https://github.com/Alberto-Vega/ClassRosterApp.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Pokemon.playground</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>E0B79C0F7CB986F0B0BE8EB6CE2258EFC97C067C</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/Alberto-Vega/ClassRosterApp.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>E0B79C0F7CB986F0B0BE8EB6CE2258EFC97C067C</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>E0B79C0F7CB986F0B0BE8EB6CE2258EFC97C067C</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ClassRosterApp</string>
+		</dict>
+	</array>
+</dict>
+</plist>

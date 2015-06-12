@@ -14,6 +14,8 @@
 		BF4BEDA91B21307300889895 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF4BEDA71B21307300889895 /* LaunchScreen.xib */; };
 		BF4BEDB51B21307300889895 /* ClassRosterAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4BEDB41B21307300889895 /* ClassRosterAppTests.swift */; };
 		BF4BEDBF1B21333F00889895 /* logo.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = BF4BEDBE1B21333F00889895 /* logo.jpeg */; };
+		BF5B8FAF1B2953C20036577B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5B8FAE1B2953C20036577B /* DetailViewController.swift */; };
+		BF5B8FB11B2957F50036577B /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5B8FB01B2957F50036577B /* Student.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,8 @@
 		BF4BEDB31B21307300889895 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF4BEDB41B21307300889895 /* ClassRosterAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassRosterAppTests.swift; sourceTree = "<group>"; };
 		BF4BEDBE1B21333F00889895 /* logo.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = logo.jpeg; sourceTree = "<group>"; };
+		BF5B8FAE1B2953C20036577B /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		BF5B8FB01B2957F50036577B /* Student.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +85,8 @@
 			children = (
 				BF4BED9E1B21307300889895 /* AppDelegate.swift */,
 				BF4BEDA01B21307300889895 /* ViewController.swift */,
+				BF5B8FB01B2957F50036577B /* Student.swift */,
+				BF5B8FAE1B2953C20036577B /* DetailViewController.swift */,
 				BF4BEDA21B21307300889895 /* Main.storyboard */,
 				BF4BEDA51B21307300889895 /* Images.xcassets */,
 				BF4BEDBE1B21333F00889895 /* logo.jpeg */,
@@ -216,8 +222,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF5B8FAF1B2953C20036577B /* DetailViewController.swift in Sources */,
 				BF4BEDA11B21307300889895 /* ViewController.swift in Sources */,
 				BF4BED9F1B21307300889895 /* AppDelegate.swift in Sources */,
+				BF5B8FB11B2957F50036577B /* Student.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,6 +421,7 @@
 				BF4BEDBA1B21307300889895 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BF4BEDBB1B21307300889895 /* Build configuration list for PBXNativeTarget "ClassRosterAppTests" */ = {
 			isa = XCConfigurationList;
@@ -421,6 +430,7 @@
 				BF4BEDBD1B21307300889895 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
