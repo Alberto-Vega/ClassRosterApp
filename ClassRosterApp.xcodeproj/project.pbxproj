@@ -7,15 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF3C37EA1B350570000EAD4B /* beach1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BF715B5C1B3500A700127436 /* beach1.jpg */; };
 		BF4BED9F1B21307300889895 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4BED9E1B21307300889895 /* AppDelegate.swift */; };
 		BF4BEDA11B21307300889895 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4BEDA01B21307300889895 /* ViewController.swift */; };
 		BF4BEDA41B21307300889895 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF4BEDA21B21307300889895 /* Main.storyboard */; };
 		BF4BEDA61B21307300889895 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF4BEDA51B21307300889895 /* Images.xcassets */; };
 		BF4BEDA91B21307300889895 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF4BEDA71B21307300889895 /* LaunchScreen.xib */; };
 		BF4BEDB51B21307300889895 /* ClassRosterAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4BEDB41B21307300889895 /* ClassRosterAppTests.swift */; };
-		BF4BEDBF1B21333F00889895 /* logo.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = BF4BEDBE1B21333F00889895 /* logo.jpeg */; };
 		BF5B8FAF1B2953C20036577B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5B8FAE1B2953C20036577B /* DetailViewController.swift */; };
 		BF5B8FB11B2957F50036577B /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5B8FB01B2957F50036577B /* Student.swift */; };
+		BFCD51AA1B34F9AA00412043 /* beach.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BFCD51A91B34F9AA00412043 /* beach.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,9 +40,10 @@
 		BF4BEDAE1B21307300889895 /* ClassRosterAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClassRosterAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF4BEDB31B21307300889895 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF4BEDB41B21307300889895 /* ClassRosterAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassRosterAppTests.swift; sourceTree = "<group>"; };
-		BF4BEDBE1B21333F00889895 /* logo.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = logo.jpeg; sourceTree = "<group>"; };
 		BF5B8FAE1B2953C20036577B /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		BF5B8FB01B2957F50036577B /* Student.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
+		BF715B5C1B3500A700127436 /* beach1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = beach1.jpg; path = ClassRosterAppTests/beach1.jpg; sourceTree = SOURCE_ROOT; };
+		BFCD51A91B34F9AA00412043 /* beach.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = beach.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,7 +90,7 @@
 				BFEAEE051B2B6DD100C4789D /* Controllers */,
 				BFEAEE061B2B6E0700C4789D /* Views */,
 				BF4BEDA51B21307300889895 /* Images.xcassets */,
-				BF4BEDBE1B21333F00889895 /* logo.jpeg */,
+				BF715B5C1B3500A700127436 /* beach1.jpg */,
 				BF4BEDA71B21307300889895 /* LaunchScreen.xib */,
 				BF4BED9C1B21307300889895 /* Supporting Files */,
 			);
@@ -115,6 +117,7 @@
 		BF4BEDB21B21307300889895 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				BFCD51A91B34F9AA00412043 /* beach.jpg */,
 				BF4BEDB31B21307300889895 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -227,8 +230,8 @@
 			files = (
 				BF4BEDA41B21307300889895 /* Main.storyboard in Resources */,
 				BF4BEDA91B21307300889895 /* LaunchScreen.xib in Resources */,
-				BF4BEDBF1B21333F00889895 /* logo.jpeg in Resources */,
 				BF4BEDA61B21307300889895 /* Images.xcassets in Resources */,
+				BF3C37EA1B350570000EAD4B /* beach1.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,6 +239,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFCD51AA1B34F9AA00412043 /* beach.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

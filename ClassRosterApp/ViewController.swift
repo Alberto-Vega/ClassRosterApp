@@ -13,6 +13,7 @@ class ViewController: UIViewController, UITableViewDataSource {
   @IBOutlet weak var tableView: UITableView!
   
   var students = [Student]()
+  var myInfo = [String: Student]()
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -34,9 +35,19 @@ class ViewController: UIViewController, UITableViewDataSource {
     let heidi = Student(first: "Heide", last: "Laursen")
     let jeremy = Student(first: "Jeremy", last: "Moore")
     let joao = Student(first: "Joao", last: "Alves")
-
+    
     students += [alberto, adam, molly, nicholas, richard, benjamin, bob, brad, brandon, chris, cierra, craig, edrease, heidi, jeremy,joao]
     
+    self.myInfo["bff"] = jeremy
+    self.myInfo["buddy"] = joao
+    
+    var QB1 = self.myInfo["bff"]
+    QB1?.firstName
+  }
+  
+  override func viewWillAppear(animated: Bool) {
+    super.viewWillAppear(animated)
+    self.tableView.reloadData()
   }
   
   func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -45,21 +56,27 @@ class ViewController: UIViewController, UITableViewDataSource {
   
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     let cell = self.tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! UITableViewCell
-
-  let studentToDisplay = self.students[indexPath.row]
-  cell.textLabel?.text = studentToDisplay.firstName + " " + studentToDisplay.lastName
-  return cell
+    let studentToDisplay = self.students[indexPath.row]
+    
+    if let studentToDisplayImage = studentToDisplay.image {
+      cell.imageView?.image = studentToDisplayImage
+    }
+    
+    cell.textLabel?.text = studentToDisplay.firstName + " " + studentToDisplay.lastName
+    return cell
   }
   
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     if segue.identifier == "ShowDetailViewController" {
-      let detailViewController = segue.destinationViewController as! DetailViewController
-      
-      let indexPath = self.tableView.indexPathForSelectedRow()
-      let selectedRow = indexPath!.row
-      let selectedPerson = self.students[selectedRow]
-      println(selectedPerson.firstName)
-      detailViewController.selectedPerson = selectedPerson
+      if let detailViewController = segue.destinationViewController as? DetailViewController {
+        
+        let indexPath = self.tableView.indexPathForSelectedRow()
+        if let selectedRow = indexPath?.row {
+          let selectedPerson = self.students[selectedRow]
+          println(selectedPerson.firstName)
+          detailViewController.selectedPerson = selectedPerson
+        }
+      }
     }
   }
 }

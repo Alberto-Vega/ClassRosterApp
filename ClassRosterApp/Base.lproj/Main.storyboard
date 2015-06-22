@@ -63,36 +63,49 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qIj-nS-Ve7">
-                                <rect key="frame" x="279" y="289" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FgD-X5-OFF">
-                                <rect key="frame" x="279" y="345" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="czB-2l-B3u">
+                                <rect key="frame" x="254" y="72" width="92" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VZj-wo-R3F">
+                                <rect key="frame" x="255" y="110" width="91" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gcc-rQ-NKO">
+                                <rect key="frame" x="276" y="550" width="49" height="30"/>
+                                <state key="normal" title="Photos">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="photoButtonPressed:" destination="Eyw-Mo-bcS" eventType="touchUpInside" id="iNk-dZ-WH1"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="beach1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="MHL-hq-9t0">
+                                <rect key="frame" x="250" y="148" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="3M2-Np-Gr5"/>
+                                    <constraint firstAttribute="width" constant="100" id="Osl-IZ-MZk"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="qIj-nS-Ve7" secondAttribute="centerX" id="3sE-LQ-GN2"/>
-                            <constraint firstAttribute="centerX" secondItem="FgD-X5-OFF" secondAttribute="centerX" id="QGB-Lm-OtC"/>
-                            <constraint firstItem="FgD-X5-OFF" firstAttribute="centerX" secondItem="qIj-nS-Ve7" secondAttribute="centerX" id="QZp-Qg-VNn"/>
-                            <constraint firstItem="FgD-X5-OFF" firstAttribute="top" secondItem="qIj-nS-Ve7" secondAttribute="bottom" constant="35" id="cde-CF-JcA"/>
-                            <constraint firstAttribute="centerY" secondItem="qIj-nS-Ve7" secondAttribute="centerY" id="loe-o7-lOe"/>
+                            <constraint firstItem="czB-2l-B3u" firstAttribute="top" secondItem="iKp-Qv-dfj" secondAttribute="bottom" constant="8" id="4fE-SV-yeh"/>
+                            <constraint firstAttribute="centerX" secondItem="MHL-hq-9t0" secondAttribute="centerX" id="71g-da-8RT"/>
+                            <constraint firstAttribute="centerX" secondItem="VZj-wo-R3F" secondAttribute="centerX" id="91M-Of-sGd"/>
+                            <constraint firstItem="VZj-wo-R3F" firstAttribute="top" secondItem="czB-2l-B3u" secondAttribute="bottom" constant="8" id="Rgg-Mi-Vgn"/>
+                            <constraint firstItem="MHL-hq-9t0" firstAttribute="top" secondItem="VZj-wo-R3F" secondAttribute="bottom" constant="8" id="b6m-3i-xMd"/>
+                            <constraint firstAttribute="centerX" secondItem="Gcc-rQ-NKO" secondAttribute="centerX" id="ebS-3W-Ood"/>
+                            <constraint firstItem="9FI-B9-o7W" firstAttribute="top" secondItem="Gcc-rQ-NKO" secondAttribute="bottom" constant="20" id="j3h-22-2O8"/>
+                            <constraint firstAttribute="centerX" secondItem="czB-2l-B3u" secondAttribute="centerX" id="yB1-Bs-QZC"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="QGB-Lm-OtC"/>
-                            </mask>
-                        </variation>
                     </view>
                     <connections>
-                        <outlet property="studentLastNameLabel" destination="FgD-X5-OFF" id="xCz-NI-LOC"/>
-                        <outlet property="studentNameLabel" destination="qIj-nS-Ve7" id="hdW-KU-uvz"/>
+                        <outlet property="imageView" destination="MHL-hq-9t0" id="eqf-UQ-3qJ"/>
+                        <outlet property="studentFirstNameTextField" destination="czB-2l-B3u" id="eKv-bD-fOe"/>
+                        <outlet property="studentLastNameTextField" destination="VZj-wo-R3F" id="YFK-PR-M1b"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7r0-bN-Oaw" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -118,4 +131,7 @@
             <point key="canvasLocation" x="341" y="350"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="beach1.jpg" width="121" height="79"/>
+    </resources>
 </document>

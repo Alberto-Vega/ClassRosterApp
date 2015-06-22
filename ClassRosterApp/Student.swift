@@ -6,11 +6,12 @@
 //  Copyright (c) 2015 Alberto Vega Gonzalez. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class Student {
   var firstName: String
   var lastName: String
+  var image: UIImage?
   
   init(first: String, last: String) {
     self.firstName = first
