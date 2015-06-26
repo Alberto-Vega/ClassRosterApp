@@ -9,21 +9,18 @@
 import UIKit
 
 class StudentCell: UITableViewCell {
+  
   @IBOutlet weak var firstNameLabel: UILabel!
   @IBOutlet weak var lastNameLabel: UILabel!
   @IBOutlet weak var studentImageView: UIImageView!
   
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-//      self.studentImageView.layer.cornerRadius = imageView.frame.size.width/2
-//      self.studentImageView.clipsToBounds = true
-    }
-
-    override func setSelected(selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
+  override func awakeFromNib() {
+    super.awakeFromNib()
+    // Initialization code
+  }
+  
+  override func setSelected(selected: Bool, animated: Bool) {
+    super.setSelected(selected, animated: animated)
+    // Configure the view for the selected state
+  }
 }

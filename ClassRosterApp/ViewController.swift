@@ -17,9 +17,14 @@ class ViewController: UIViewController, UITableViewDataSource {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    self.loadPeopleFromPlist()
+    if let peopleFromArchive = self.loadFromArchive() {
+      self.people = peopleFromArchive
+    } else {
+      self.loadPeopleFromPlist()
+      self.saveToArchive()
+    }
     self.tableView.dataSource = self
-   }
+  }
   
   private func loadPeopleFromPlist() {
     if let peoplePath = NSBundle.mainBundle().pathForResource("People", ofType: "plist"),
@@ -37,6 +42,7 @@ class ViewController: UIViewController, UITableViewDataSource {
   
   override func viewWillAppear(animated: Bool) {
     super.viewWillAppear(animated)
+    self.saveToArchive()
     self.tableView.reloadData()
   }
   
@@ -46,32 +52,30 @@ class ViewController: UIViewController, UITableViewDataSource {
   
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     let cell = self.tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! StudentCell
-    
-
+    cell.studentImageView.layer.cornerRadius = 8
+    cell.studentImageView.layer.masksToBounds = true
+    cell.studentImageView.layer.borderWidth = 0.3
+    cell.studentImageView.layer.borderColor = UIColor.whiteColor().CGColor
     let studentToDisplay = self.people[indexPath.row]
     
     if let image = studentToDisplay.image {
-      cell.imageView?.image = image
+      cell.studentImageView.image = image
     }
-
-//    cell.layer.cornerRadius = 20.0
-//    cell.backgroundColor = UIColor.blueColor()
-    cell.studentImageView.layer.cornerRadius = 8
-
-
     
     cell.firstNameLabel.text = studentToDisplay.firstName
     cell.lastNameLabel.text = studentToDisplay.lastName
     
+    let userDefaults = NSUserDefaults.standardUserDefaults()
     
-    
+    if let lastSelectedName = userDefaults.objectForKey("LastSelected") as? String where lastSelectedName == studentToDisplay.firstName {
+      cell.backgroundColor = UIColor.lightGrayColor()
+    }
     return cell
   }
   
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     if segue.identifier == "ShowDetailViewController" {
       if let detailViewController = segue.destinationViewController as? DetailViewController {
-        
         let indexPath = self.tableView.indexPathForSelectedRow()
         if let selectedRow = indexPath?.row {
           let selectedPerson = self.people[selectedRow]
@@ -81,5 +85,20 @@ class ViewController: UIViewController, UITableViewDataSource {
       }
     }
   }
+  
+  func saveToArchive() {
+    if let archivePath = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true).last as? String {
+      println(archivePath)
+      NSKeyedArchiver.archiveRootObject(self.people, toFile: archivePath + "/archive")
+    }
+  }
+  
+  func loadFromArchive() -> [Student]? {
+    if let archivePath = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true).last as? String {
+      if let peopleFromArchive = NSKeyedUnarchiver.unarchiveObjectWithFile(archivePath + "/archive") as? [Student] {
+        return peopleFromArchive
+      }
+    }
+    return nil
+  }
 }
-

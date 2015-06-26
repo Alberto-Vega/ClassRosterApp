@@ -121,12 +121,6 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8A6-1O-6c1">
                                 <rect key="frame" x="8" y="507" width="304" height="53"/>
                                 <subviews>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Class Roster" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nnr-oC-D2e">
-                                        <rect key="frame" x="69" y="9" width="167" height="36"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gcc-rQ-NKO">
                                         <rect key="frame" x="8" y="9" width="36" height="35"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -138,12 +132,30 @@
                                             <action selector="photoButtonPressed:" destination="Eyw-Mo-bcS" eventType="touchUpInside" id="iNk-dZ-WH1"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mgy-IK-Skh">
+                                        <rect key="frame" x="222" y="12" width="74" height="30"/>
+                                        <state key="normal" title="My Photos">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="myPhotosButtonPressed:" destination="Eyw-Mo-bcS" eventType="touchUpInside" id="9Db-j6-pXH"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Class Roster" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nnr-oC-D2e">
+                                        <rect key="frame" x="66" y="12" width="139" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.38183593746578953" alpha="0.96999999999999997" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstItem="Mgy-IK-Skh" firstAttribute="trailing" secondItem="8A6-1O-6c1" secondAttribute="trailingMargin" id="91J-sk-i5K"/>
                                     <constraint firstAttribute="centerY" secondItem="Gcc-rQ-NKO" secondAttribute="centerY" id="H6S-N0-d5w"/>
-                                    <constraint firstAttribute="centerX" secondItem="Nnr-oC-D2e" secondAttribute="centerX" id="Iaa-Ia-DXz"/>
+                                    <constraint firstAttribute="centerX" secondItem="Nnr-oC-D2e" secondAttribute="centerX" constant="16.5" id="Iaa-Ia-DXz"/>
+                                    <constraint firstAttribute="centerY" secondItem="Mgy-IK-Skh" secondAttribute="centerY" id="TIE-wk-WB1"/>
                                     <constraint firstAttribute="centerY" secondItem="Nnr-oC-D2e" secondAttribute="centerY" id="im9-ns-Ki2"/>
+                                    <constraint firstItem="Mgy-IK-Skh" firstAttribute="leading" secondItem="Nnr-oC-D2e" secondAttribute="trailing" constant="17" id="kRe-7W-RBM"/>
                                     <constraint firstAttribute="height" constant="53" id="kxp-iq-j4M"/>
                                     <constraint firstItem="Gcc-rQ-NKO" firstAttribute="leading" secondItem="8A6-1O-6c1" secondAttribute="leading" constant="8" id="sxB-bB-yVy"/>
                                 </constraints>
@@ -204,7 +216,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7r0-bN-Oaw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1197" y="307"/>
+            <point key="canvasLocation" x="1015" y="339"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="2gh-dj-aTd">
