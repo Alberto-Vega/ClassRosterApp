@@ -12,37 +12,27 @@ class ViewController: UIViewController, UITableViewDataSource {
   
   @IBOutlet weak var tableView: UITableView!
   
-  var students = [Student]()
+  var people = [Student]()
   var myInfo = [String: Student]()
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    self.loadPeopleFromPlist()
     self.tableView.dataSource = self
-    
-    let alberto = Student(first: "Alberto", last: "Vega")
-    let adam = Student(first: "Adam", last: "Wallraff")
-    let molly = Student(first: "Molly", last: "Kent")
-    let nicholas = Student(first: "Nicholas", last: "Von Pentz")
-    let richard = Student(first: "Richard", last: "Woolley")
-    let benjamin = Student(first: "Benjamin", last: "Laddin")
-    let bob = Student(first: "Bob", last: "Glass")
-    let brad = Student(first: "Brad", last: "Johnson")
-    let brandon = Student(first: "Brandon", last: "Roberts")
-    let chris = Student(first: "Chris", last: "Olds")
-    let cierra = Student(first: "Cierra", last: "Figaro")
-    let craig = Student(first: "Craig", last: "Chaillie")
-    let edrease = Student(first: "Edrease", last: "Peshtaz")
-    let heidi = Student(first: "Heide", last: "Laursen")
-    let jeremy = Student(first: "Jeremy", last: "Moore")
-    let joao = Student(first: "Joao", last: "Alves")
-    
-    students += [alberto, adam, molly, nicholas, richard, benjamin, bob, brad, brandon, chris, cierra, craig, edrease, heidi, jeremy,joao]
-    
-    self.myInfo["bff"] = jeremy
-    self.myInfo["buddy"] = joao
-    
-    var QB1 = self.myInfo["bff"]
-    QB1?.firstName
+   }
+  
+  private func loadPeopleFromPlist() {
+    if let peoplePath = NSBundle.mainBundle().pathForResource("People", ofType: "plist"),
+      peopleObjects = NSArray(contentsOfFile: peoplePath) as? [[String: String]]
+    {
+      for object in peopleObjects {
+        if let firstName = object["FirstName"],
+          lastName = object["LastName"] {
+            let person = Student(first: firstName, last: lastName)
+            self.people.append(person)
+        }
+      }
+    }
   }
   
   override func viewWillAppear(animated: Bool) {
@@ -51,18 +41,30 @@ class ViewController: UIViewController, UITableViewDataSource {
   }
   
   func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return self.students.count
+    return self.people.count
   }
   
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    let cell = self.tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! UITableViewCell
-    let studentToDisplay = self.students[indexPath.row]
+    let cell = self.tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! StudentCell
     
-    if let studentToDisplayImage = studentToDisplay.image {
-      cell.imageView?.image = studentToDisplayImage
+
+    let studentToDisplay = self.people[indexPath.row]
+    
+    if let image = studentToDisplay.image {
+      cell.imageView?.image = image
     }
+
+//    cell.layer.cornerRadius = 20.0
+//    cell.backgroundColor = UIColor.blueColor()
+    cell.studentImageView.layer.cornerRadius = 8
+
+
     
-    cell.textLabel?.text = studentToDisplay.firstName + " " + studentToDisplay.lastName
+    cell.firstNameLabel.text = studentToDisplay.firstName
+    cell.lastNameLabel.text = studentToDisplay.lastName
+    
+    
+    
     return cell
   }
   
@@ -72,7 +74,7 @@ class ViewController: UIViewController, UITableViewDataSource {
         
         let indexPath = self.tableView.indexPathForSelectedRow()
         if let selectedRow = indexPath?.row {
-          let selectedPerson = self.students[selectedRow]
+          let selectedPerson = self.people[selectedRow]
           println(selectedPerson.firstName)
           detailViewController.selectedPerson = selectedPerson
         }

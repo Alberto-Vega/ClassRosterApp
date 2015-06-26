@@ -7,16 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF0CA0CB1B39304F00B0B5E7 /* StudentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0CA0CA1B39304F00B0B5E7 /* StudentCell.swift */; };
+		BF0CA0CF1B39386D00B0B5E7 /* People.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF0CA0CE1B39386D00B0B5E7 /* People.plist */; };
 		BF3C37EA1B350570000EAD4B /* beach1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BF715B5C1B3500A700127436 /* beach1.jpg */; };
 		BF4BED9F1B21307300889895 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4BED9E1B21307300889895 /* AppDelegate.swift */; };
 		BF4BEDA11B21307300889895 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4BEDA01B21307300889895 /* ViewController.swift */; };
-		BF4BEDA41B21307300889895 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF4BEDA21B21307300889895 /* Main.storyboard */; };
 		BF4BEDA61B21307300889895 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF4BEDA51B21307300889895 /* Images.xcassets */; };
 		BF4BEDA91B21307300889895 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF4BEDA71B21307300889895 /* LaunchScreen.xib */; };
 		BF4BEDB51B21307300889895 /* ClassRosterAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4BEDB41B21307300889895 /* ClassRosterAppTests.swift */; };
 		BF5B8FAF1B2953C20036577B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5B8FAE1B2953C20036577B /* DetailViewController.swift */; };
 		BF5B8FB11B2957F50036577B /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5B8FB01B2957F50036577B /* Student.swift */; };
-		BFCD51AA1B34F9AA00412043 /* beach.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BFCD51A91B34F9AA00412043 /* beach.jpg */; };
+		BF645E1D1B3B91590075E86F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF645E1B1B3B91590075E86F /* Main.storyboard */; };
+		BFC22C771B3A2FDE006C8640 /* cameraButton.png in Resources */ = {isa = PBXBuildFile; fileRef = BFC22C761B3A2FDE006C8640 /* cameraButton.png */; };
+		BFC22C791B3A5653006C8640 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC22C781B3A5652006C8640 /* HomeViewController.swift */; };
+		BFC22C7B1B3A63B7006C8640 /* logo.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = BFC22C7A1B3A63B7006C8640 /* logo.jpeg */; };
+		BFC4925B1B3A7E0B00DDB00A /* iphonePluggedInRed.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BFC4925A1B3A7E0B00DDB00A /* iphonePluggedInRed.jpg */; };
+		BFC4925D1B3A83B400DDB00A /* iphonePluggedInBlue.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BFC4925C1B3A83B400DDB00A /* iphonePluggedInBlue.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,11 +36,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BF0CA0CA1B39304F00B0B5E7 /* StudentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentCell.swift; sourceTree = "<group>"; };
+		BF0CA0CE1B39386D00B0B5E7 /* People.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = People.plist; sourceTree = "<group>"; };
 		BF4BED991B21307300889895 /* ClassRosterApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClassRosterApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF4BED9D1B21307300889895 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF4BED9E1B21307300889895 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF4BEDA01B21307300889895 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		BF4BEDA31B21307300889895 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BF4BEDA51B21307300889895 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		BF4BEDA81B21307300889895 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		BF4BEDAE1B21307300889895 /* ClassRosterAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClassRosterAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -42,8 +49,13 @@
 		BF4BEDB41B21307300889895 /* ClassRosterAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassRosterAppTests.swift; sourceTree = "<group>"; };
 		BF5B8FAE1B2953C20036577B /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		BF5B8FB01B2957F50036577B /* Student.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
+		BF645E1C1B3B91590075E86F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BF715B5C1B3500A700127436 /* beach1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = beach1.jpg; path = ClassRosterAppTests/beach1.jpg; sourceTree = SOURCE_ROOT; };
-		BFCD51A91B34F9AA00412043 /* beach.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = beach.jpg; sourceTree = "<group>"; };
+		BFC22C761B3A2FDE006C8640 /* cameraButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cameraButton.png; sourceTree = "<group>"; };
+		BFC22C781B3A5652006C8640 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		BFC22C7A1B3A63B7006C8640 /* logo.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = logo.jpeg; sourceTree = "<group>"; };
+		BFC4925A1B3A7E0B00DDB00A /* iphonePluggedInRed.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = iphonePluggedInRed.jpg; sourceTree = "<group>"; };
+		BFC4925C1B3A83B400DDB00A /* iphonePluggedInBlue.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = iphonePluggedInBlue.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +102,10 @@
 				BFEAEE051B2B6DD100C4789D /* Controllers */,
 				BFEAEE061B2B6E0700C4789D /* Views */,
 				BF4BEDA51B21307300889895 /* Images.xcassets */,
+				BFC22C761B3A2FDE006C8640 /* cameraButton.png */,
+				BFC4925C1B3A83B400DDB00A /* iphonePluggedInBlue.jpg */,
+				BFC4925A1B3A7E0B00DDB00A /* iphonePluggedInRed.jpg */,
+				BFC22C7A1B3A63B7006C8640 /* logo.jpeg */,
 				BF715B5C1B3500A700127436 /* beach1.jpg */,
 				BF4BEDA71B21307300889895 /* LaunchScreen.xib */,
 				BF4BED9C1B21307300889895 /* Supporting Files */,
@@ -100,6 +116,7 @@
 		BF4BED9C1B21307300889895 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				BF0CA0CE1B39386D00B0B5E7 /* People.plist */,
 				BF4BED9D1B21307300889895 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -117,7 +134,6 @@
 		BF4BEDB21B21307300889895 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				BFCD51A91B34F9AA00412043 /* beach.jpg */,
 				BF4BEDB31B21307300889895 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -134,8 +150,9 @@
 		BFEAEE051B2B6DD100C4789D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				BF5B8FAE1B2953C20036577B /* DetailViewController.swift */,
+				BFC22C781B3A5652006C8640 /* HomeViewController.swift */,
 				BF4BEDA01B21307300889895 /* ViewController.swift */,
+				BF5B8FAE1B2953C20036577B /* DetailViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -143,7 +160,8 @@
 		BFEAEE061B2B6E0700C4789D /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				BF4BEDA21B21307300889895 /* Main.storyboard */,
+				BF0CA0CA1B39304F00B0B5E7 /* StudentCell.swift */,
+				BF645E1B1B3B91590075E86F /* Main.storyboard */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -228,9 +246,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF4BEDA41B21307300889895 /* Main.storyboard in Resources */,
+				BFC22C771B3A2FDE006C8640 /* cameraButton.png in Resources */,
+				BFC22C7B1B3A63B7006C8640 /* logo.jpeg in Resources */,
+				BFC4925B1B3A7E0B00DDB00A /* iphonePluggedInRed.jpg in Resources */,
+				BF0CA0CF1B39386D00B0B5E7 /* People.plist in Resources */,
 				BF4BEDA91B21307300889895 /* LaunchScreen.xib in Resources */,
+				BFC4925D1B3A83B400DDB00A /* iphonePluggedInBlue.jpg in Resources */,
 				BF4BEDA61B21307300889895 /* Images.xcassets in Resources */,
+				BF645E1D1B3B91590075E86F /* Main.storyboard in Resources */,
 				BF3C37EA1B350570000EAD4B /* beach1.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -239,7 +262,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BFCD51AA1B34F9AA00412043 /* beach.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,10 +272,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF0CA0CB1B39304F00B0B5E7 /* StudentCell.swift in Sources */,
 				BF5B8FAF1B2953C20036577B /* DetailViewController.swift in Sources */,
 				BF4BEDA11B21307300889895 /* ViewController.swift in Sources */,
 				BF4BED9F1B21307300889895 /* AppDelegate.swift in Sources */,
 				BF5B8FB11B2957F50036577B /* Student.swift in Sources */,
+				BFC22C791B3A5653006C8640 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,20 +300,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		BF4BEDA21B21307300889895 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BF4BEDA31B21307300889895 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		BF4BEDA71B21307300889895 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				BF4BEDA81B21307300889895 /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		BF645E1B1B3B91590075E86F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF645E1C1B3B91590075E86F /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

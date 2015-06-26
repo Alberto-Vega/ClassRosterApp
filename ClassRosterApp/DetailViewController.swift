@@ -13,22 +13,28 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UIImagePicker
   @IBOutlet weak var studentFirstNameTextField: UITextField!
   @IBOutlet weak var studentLastNameTextField: UITextField!
   @IBOutlet weak var imageView: UIImageView!
-  
+  @IBOutlet weak var bottomOfScreenView: UIView!
+  @IBOutlet weak var cameraButton: UIButton!
   var selectedPerson: Student?
   
   override func viewDidLoad() {
     super.viewDidLoad()
     self.imageView.layer.cornerRadius = imageView.frame.size.width/2
     self.imageView.clipsToBounds = true
-    
+    self.bottomOfScreenView.layer.cornerRadius = 8
+    self.cameraButton.layer.cornerRadius = 10
+    self.setupTextFields()
+  }
+  
+  private func setupTextFields() {
     self.studentFirstNameTextField.delegate = self
     self.studentLastNameTextField.delegate = self
     self.studentFirstNameTextField.tag = 0
     self.studentLastNameTextField.tag = 1
     
     if let person = selectedPerson {
-    self.studentFirstNameTextField.text = self.selectedPerson?.firstName
-    self.studentLastNameTextField.text = self.selectedPerson?.lastName
+      self.studentFirstNameTextField.text = self.selectedPerson?.firstName
+      self.studentLastNameTextField.text = self.selectedPerson?.lastName
     }
   }
   
@@ -45,6 +51,9 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UIImagePicker
     }
   }
   
+  @IBAction func updateButtonPressed(sender: UIButton) {
+    self.navigationController?.popViewControllerAnimated(true)
+  }
   @IBAction func photoButtonPressed(sender: UIButton) {
     
     let imagePickerController = UIImagePickerController()
