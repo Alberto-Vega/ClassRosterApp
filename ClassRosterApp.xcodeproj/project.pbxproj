@@ -22,7 +22,6 @@
 		BFC22C791B3A5653006C8640 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC22C781B3A5652006C8640 /* HomeViewController.swift */; };
 		BFC22C7B1B3A63B7006C8640 /* logo.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = BFC22C7A1B3A63B7006C8640 /* logo.jpeg */; };
 		BFC4925B1B3A7E0B00DDB00A /* iphonePluggedInRed.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BFC4925A1B3A7E0B00DDB00A /* iphonePluggedInRed.jpg */; };
-		BFC4925D1B3A83B400DDB00A /* iphonePluggedInBlue.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BFC4925C1B3A83B400DDB00A /* iphonePluggedInBlue.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,7 +54,6 @@
 		BFC22C781B3A5652006C8640 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		BFC22C7A1B3A63B7006C8640 /* logo.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = logo.jpeg; sourceTree = "<group>"; };
 		BFC4925A1B3A7E0B00DDB00A /* iphonePluggedInRed.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = iphonePluggedInRed.jpg; sourceTree = "<group>"; };
-		BFC4925C1B3A83B400DDB00A /* iphonePluggedInBlue.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = iphonePluggedInBlue.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +101,6 @@
 				BFEAEE061B2B6E0700C4789D /* Views */,
 				BF4BEDA51B21307300889895 /* Images.xcassets */,
 				BFC22C761B3A2FDE006C8640 /* cameraButton.png */,
-				BFC4925C1B3A83B400DDB00A /* iphonePluggedInBlue.jpg */,
 				BFC4925A1B3A7E0B00DDB00A /* iphonePluggedInRed.jpg */,
 				BFC22C7A1B3A63B7006C8640 /* logo.jpeg */,
 				BF715B5C1B3500A700127436 /* beach1.jpg */,
@@ -251,7 +248,6 @@
 				BFC4925B1B3A7E0B00DDB00A /* iphonePluggedInRed.jpg in Resources */,
 				BF0CA0CF1B39386D00B0B5E7 /* People.plist in Resources */,
 				BF4BEDA91B21307300889895 /* LaunchScreen.xib in Resources */,
-				BFC4925D1B3A83B400DDB00A /* iphonePluggedInBlue.jpg in Resources */,
 				BF4BEDA61B21307300889895 /* Images.xcassets in Resources */,
 				BF645E1D1B3B91590075E86F /* Main.storyboard in Resources */,
 				BF3C37EA1B350570000EAD4B /* beach1.jpg in Resources */,

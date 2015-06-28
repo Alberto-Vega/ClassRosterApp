@@ -15,6 +15,7 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UIImagePicker
   @IBOutlet weak var imageView: UIImageView!
   @IBOutlet weak var bottomOfScreenView: UIView!
   @IBOutlet weak var cameraButton: UIButton!
+  @IBOutlet weak var detailScrollView: UIScrollView!
   
   var selectedPerson: Student?
   
@@ -25,6 +26,31 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UIImagePicker
     self.bottomOfScreenView.layer.cornerRadius = 8
     self.cameraButton.layer.cornerRadius = 10
     self.setupTextFields()
+    
+    NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
+    
+    NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide:", name: UIKeyboardWillHideNotification, object: nil)
+  }
+  
+  deinit {
+    NSNotificationCenter.defaultCenter().removeObserver(self)
+  }
+  
+  func keyboardWillShow(notification: NSNotification) {
+    adjustInsetForKeyboardShow(true, notification: notification)
+  }
+  
+  func keyboardWillHide(notification: NSNotification) {
+    adjustInsetForKeyboardShow(false, notification: notification)
+  }
+  
+  func adjustInsetForKeyboardShow(show: Bool, notification: NSNotification) {
+    let userInfo = notification.userInfo ?? [:]
+    let keyboardFrame = (userInfo[UIKeyboardFrameBeginUserInfoKey] as! NSValue).CGRectValue()
+    let adjustmentHeight = (CGRectGetHeight(keyboardFrame) + 20) * (show ? 1 : -1)
+    
+    detailScrollView.contentInset.bottom += adjustmentHeight
+    detailScrollView.scrollIndicatorInsets.bottom += adjustmentHeight
   }
   
   private func setupTextFields() {
@@ -34,8 +60,8 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UIImagePicker
     self.studentLastNameTextField.tag = 1
     
     if let person = selectedPerson {
-      self.studentFirstNameTextField.text = self.selectedPerson?.firstName
-      self.studentLastNameTextField.text = self.selectedPerson?.lastName
+      self.studentFirstNameTextField.text = person.firstName
+      self.studentLastNameTextField.text = person.lastName
     }
   }
   
@@ -46,9 +72,9 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UIImagePicker
   
   func textFieldDidEndEditing(textField: UITextField) {
     if textField.tag == 0 {
-      self.selectedPerson!.firstName = textField.text
+      self.selectedPerson?.firstName = textField.text
     } else {
-      self.selectedPerson!.lastName = textField.text
+      self.selectedPerson?.lastName = textField.text
     }
   }
   
@@ -76,16 +102,17 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UIImagePicker
     if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.PhotoLibrary) {
       self.presentViewController(imagePickerController, animated: true, completion: nil)
     }
+    
     if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera) {
       self.presentViewController(imagePickerController, animated: true, completion: nil)
     }
   }
   
   func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
-    let image = info[UIImagePickerControllerEditedImage] as? UIImage
-    self.imageView.image = image
-    self.selectedPerson?.image = image
-    
+    if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
+      self.imageView.image = image
+      self.selectedPerson?.image = image
+    }
     picker.dismissViewControllerAnimated(true, completion: nil)
   }
 }
