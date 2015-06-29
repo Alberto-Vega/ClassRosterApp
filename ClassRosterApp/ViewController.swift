@@ -52,10 +52,26 @@ class ViewController: UIViewController, UITableViewDataSource {
   
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     let cell = self.tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! StudentCell
+    
     cell.studentImageView.layer.cornerRadius = 8
     cell.studentImageView.layer.masksToBounds = true
     cell.studentImageView.layer.borderWidth = 0.3
     cell.studentImageView.layer.borderColor = UIColor.whiteColor().CGColor
+    
+    cell.studentImageView.layer.shadowRadius = 5
+    cell.studentImageView.layer.shadowOpacity = 0.5
+    cell.studentImageView.layer.shadowOffset = CGSize.zeroSize
+    cell.studentImageView.layer.shadowColor = UIColor.whiteColor().CGColor
+    
+//    let studentImageshadow = UIView(frame: CGRect(x: 0, y: 0, width: cell.studentImageView.frame.width, height: cell.studentImageView.frame.height))
+    cell.studentImageShadow.backgroundColor = UIColor.blackColor()
+    cell.studentImageShadow.layer.cornerRadius = cell.studentImageShadow.frame.size.width/2
+    cell.studentImageShadow.layer.shadowRadius = 4
+    cell.studentImageShadow.layer.shadowOpacity = 1.0
+    cell.studentImageShadow.layer.shadowOffset = CGSize.zeroSize
+    
+    
+    
     let studentToDisplay = self.people[indexPath.row]
     
     if let image = studentToDisplay.image {

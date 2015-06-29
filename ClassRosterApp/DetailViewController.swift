@@ -13,6 +13,7 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UIImagePicker
   @IBOutlet weak var studentFirstNameTextField: UITextField!
   @IBOutlet weak var studentLastNameTextField: UITextField!
   @IBOutlet weak var imageView: UIImageView!
+  @IBOutlet weak var shadowView: UIView!
   @IBOutlet weak var bottomOfScreenView: UIView!
   @IBOutlet weak var cameraButton: UIButton!
   @IBOutlet weak var detailScrollView: UIScrollView!
@@ -21,8 +22,33 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UIImagePicker
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    
+//    let shadowView = UIView(frame:CGRect(x:0, y:0, width:self.imageView.frame.width, height: self.imageView.frame.height))
+//    shadowView.frame = imageView.bounds
+
+
+    
+    self.imageView.backgroundColor = UIColor.blackColor()
     self.imageView.layer.cornerRadius = imageView.frame.size.width/2
     self.imageView.clipsToBounds = true
+    
+    shadowView.layer.cornerRadius = shadowView.frame.size.width/2
+    shadowView.layer.shadowRadius = 4
+    shadowView.layer.shadowOpacity = 1.0
+    shadowView.layer.shadowOffset = CGSize.zeroSize
+    shadowView.layer.shadowColor = UIColor.blackColor().CGColor
+    shadowView.backgroundColor = UIColor.whiteColor()
+    shadowView.clipsToBounds = false
+    
+//    self.imageView.addSubview(shadowView)
+    
+//    imageView.layer.borderWidth = 12
+//    imageView.layer.borderColor = UIColor.whiteColor().CGColor
+    
+    imageView.layer.shadowRadius = 4
+    imageView.layer.shadowOpacity = 1.0
+    imageView.layer.shadowOffset = CGSize.zeroSize
+    
     self.bottomOfScreenView.layer.cornerRadius = 8
     self.cameraButton.layer.cornerRadius = 10
     self.setupTextFields()

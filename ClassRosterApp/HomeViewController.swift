@@ -10,11 +10,11 @@ import UIKit
 
 class HomeViewController: UIViewController {
   
-  @IBOutlet weak var GetStartedButton: UIButton!
+  @IBOutlet weak var getStartedButton: UIButton!
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    GetStartedButton.layer.cornerRadius = 20
+    getStartedButton.layer.cornerRadius = CGRectGetHeight(getStartedButton.bounds) / 2
     // Do any additional setup after loading the view.
   }
   

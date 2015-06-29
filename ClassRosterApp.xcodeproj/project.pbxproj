@@ -15,6 +15,7 @@
 		BF4BEDA61B21307300889895 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF4BEDA51B21307300889895 /* Images.xcassets */; };
 		BF4BEDA91B21307300889895 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF4BEDA71B21307300889895 /* LaunchScreen.xib */; };
 		BF4BEDB51B21307300889895 /* ClassRosterAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4BEDB41B21307300889895 /* ClassRosterAppTests.swift */; };
+		BF593DB91B3F9D8800934103 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF593DB81B3F9D8800934103 /* QuartzCore.framework */; };
 		BF5B8FAF1B2953C20036577B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5B8FAE1B2953C20036577B /* DetailViewController.swift */; };
 		BF5B8FB11B2957F50036577B /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5B8FB01B2957F50036577B /* Student.swift */; };
 		BF645E1D1B3B91590075E86F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF645E1B1B3B91590075E86F /* Main.storyboard */; };
@@ -46,6 +47,7 @@
 		BF4BEDAE1B21307300889895 /* ClassRosterAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClassRosterAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF4BEDB31B21307300889895 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF4BEDB41B21307300889895 /* ClassRosterAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassRosterAppTests.swift; sourceTree = "<group>"; };
+		BF593DB81B3F9D8800934103 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		BF5B8FAE1B2953C20036577B /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		BF5B8FB01B2957F50036577B /* Student.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		BF645E1C1B3B91590075E86F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF593DB91B3F9D8800934103 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +80,7 @@
 		BF4BED901B21307300889895 = {
 			isa = PBXGroup;
 			children = (
+				BF593DB81B3F9D8800934103 /* QuartzCore.framework */,
 				BF4BED9B1B21307300889895 /* ClassRosterApp */,
 				BF4BEDB11B21307300889895 /* ClassRosterAppTests */,
 				BF4BED9A1B21307300889895 /* Products */,
