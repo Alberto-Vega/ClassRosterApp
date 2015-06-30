@@ -7,48 +7,64 @@
 		<string>Alberto</string>
 		<key>LastName</key>
 		<string>Vega</string>
+		<key>Email</key>
+		<string>albertoemail</string>
 	</dict>
 	<dict>
 		<key>FirstName</key>
 		<string>Miles</string>
 		<key>LastName</key>
 		<string>Ranisavljevic</string>
+		<key>Email</key>
+		<string>milesemail</string>
 	</dict>
 	<dict>
 		<key>FirstName</key>
 		<string>Adam</string>
 		<key>LastName</key>
 		<string>Wallraff</string>
+		<key>Email</key>
+		<string>adamsemail</string>
 	</dict>
 	<dict>
 		<key>FirstName</key>
 		<string>Matthew</string>
 		<key>LastName</key>
 		<string>McClure</string>
+		<key>Email</key>
+		<string>mattsemail</string>
 	</dict>
 	<dict>
 		<key>FirstName</key>
 		<string>Kris</string>
 		<key>LastName</key>
 		<string>Hunt</string>
+		<key>Email</key>
+		<string>krissemail</string>
 	</dict>
 	<dict>
 		<key>FirstName</key>
 		<string>Richard</string>
 		<key>LastName</key>
 		<string>Woolley</string>
+		<key>Email</key>
+		<string>richardsemail</string>
 	</dict>
 	<dict>
 		<key>FirstName</key>
 		<string>Jeremy</string>
 		<key>LastName</key>
 		<string>Moore</string>
+		<key>Email</key>
+		<string>jeremysemail</string>
 	</dict>
-  <dict>
-    <key>FirstName</key>
-    <string>Joao</string>
-    <key>LastName</key>
-    <string>Alves</string>
-  </dict>
+	<dict>
+		<key>FirstName</key>
+		<string>Joao</string>
+		<key>LastName</key>
+		<string>Alves</string>
+		<key>Email</key>
+		<string>joaosemail</string>
+	</dict>
 </array>
 </plist>

@@ -12,7 +12,6 @@ class StudentCell: UITableViewCell {
   
   @IBOutlet weak var firstNameLabel: UILabel!
   @IBOutlet weak var lastNameLabel: UILabel!
-  
   @IBOutlet weak var studentImageShadowView: UIView!
   @IBOutlet weak var studentImageView: UIImageView!
   
