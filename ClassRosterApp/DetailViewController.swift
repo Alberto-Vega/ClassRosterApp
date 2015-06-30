@@ -23,15 +23,6 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UIImagePicker
   override func viewDidLoad() {
     super.viewDidLoad()
     
-//    let shadowView = UIView(frame:CGRect(x:0, y:0, width:self.imageView.frame.width, height: self.imageView.frame.height))
-//    shadowView.frame = imageView.bounds
-
-
-    
-    self.imageView.backgroundColor = UIColor.blackColor()
-    self.imageView.layer.cornerRadius = imageView.frame.size.width/2
-    self.imageView.clipsToBounds = true
-    
     shadowView.layer.cornerRadius = shadowView.frame.size.width/2
     shadowView.layer.shadowRadius = 4
     shadowView.layer.shadowOpacity = 1.0
@@ -40,10 +31,9 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UIImagePicker
     shadowView.backgroundColor = UIColor.whiteColor()
     shadowView.clipsToBounds = false
     
-//    self.imageView.addSubview(shadowView)
-    
-//    imageView.layer.borderWidth = 12
-//    imageView.layer.borderColor = UIColor.whiteColor().CGColor
+    imageView.backgroundColor = UIColor.blackColor()
+    imageView.layer.cornerRadius = imageView.frame.size.width/2
+    imageView.clipsToBounds = true
     
     imageView.layer.shadowRadius = 4
     imageView.layer.shadowOpacity = 1.0
@@ -54,7 +44,6 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UIImagePicker
     self.setupTextFields()
     
     NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
-    
     NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide:", name: UIKeyboardWillHideNotification, object: nil)
   }
   

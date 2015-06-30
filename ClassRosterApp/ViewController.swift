@@ -58,19 +58,11 @@ class ViewController: UIViewController, UITableViewDataSource {
     cell.studentImageView.layer.borderWidth = 0.3
     cell.studentImageView.layer.borderColor = UIColor.whiteColor().CGColor
     
-    cell.studentImageView.layer.shadowRadius = 5
-    cell.studentImageView.layer.shadowOpacity = 0.5
-    cell.studentImageView.layer.shadowOffset = CGSize.zeroSize
-    cell.studentImageView.layer.shadowColor = UIColor.whiteColor().CGColor
-    
-//    let studentImageshadow = UIView(frame: CGRect(x: 0, y: 0, width: cell.studentImageView.frame.width, height: cell.studentImageView.frame.height))
-    cell.studentImageShadow.backgroundColor = UIColor.blackColor()
-    cell.studentImageShadow.layer.cornerRadius = cell.studentImageShadow.frame.size.width/2
-    cell.studentImageShadow.layer.shadowRadius = 4
-    cell.studentImageShadow.layer.shadowOpacity = 1.0
-    cell.studentImageShadow.layer.shadowOffset = CGSize.zeroSize
-    
-    
+    cell.studentImageShadowView.backgroundColor = UIColor.blackColor()
+    cell.studentImageShadowView.layer.cornerRadius = cell.studentImageShadowView.frame.size.width/2
+    cell.studentImageShadowView.layer.shadowRadius = 4
+    cell.studentImageShadowView.layer.shadowOpacity = 1.0
+    cell.studentImageShadowView.layer.shadowOffset = CGSize.zeroSize
     
     let studentToDisplay = self.people[indexPath.row]
     
